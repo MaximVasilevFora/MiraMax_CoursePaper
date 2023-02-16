@@ -1,0 +1,58 @@
+﻿<Window x:Class="MiraMaxCoursePaper.Windows.AdminWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:MiraMaxCoursePaper.Windows"
+        mc:Ignorable="d"
+        Title="MiraMax"
+		WindowState="Maximized"
+		WindowStartupLocation="CenterScreen"
+		Height="720"
+		MinHeight="370"
+		Width="1520"
+		MinWidth="760">
+
+	<Window.Resources>
+		<Style TargetType="Button">
+			<Setter Property="FontSize" Value="20"></Setter>
+			<Setter Property="FontFamily" Value="Inter"></Setter>
+			<Setter Property="FontWeight" Value="Bold"></Setter>
+			<Setter Property="Foreground" Value="#FFFFFF"></Setter>
+			<Setter Property="Background" Value="#1F75A8"></Setter>
+			<Setter Property="Margin" Value="10 10 10 10"></Setter>
+			<Setter Property="Padding" Value="10 0 10 0"></Setter>
+		</Style>
+	</Window.Resources>
+	
+    <Grid>
+		<Grid.RowDefinitions>
+			<RowDefinition Height="70"></RowDefinition>
+			<RowDefinition></RowDefinition>
+		</Grid.RowDefinitions>
+
+		<StackPanel Orientation="Horizontal" Grid.Row="0" HorizontalAlignment="Right" Margin="0 0 20 0">
+			<Button Name="Exit" Click="Exit_Click">Выйти</Button>
+		</StackPanel>
+		
+		<DataGrid Grid.Row="1" Name="Users" IsReadOnly="true" AutoGenerateColumns="False" Margin="30 0 30 30">
+			<DataGrid.Columns>
+				<DataGridTextColumn Header="Имя" Width="*" Binding="{Binding GetName}"/>
+				<DataGridTextColumn Header="Логин" Width="*" Binding="{Binding GetLogin}"/>
+				<DataGridTextColumn Header="Почта" Width="*" Binding="{Binding GetMail}"/>
+				<DataGridTextColumn Header="Роль" Width="*" Binding="{Binding GetRole}"/>
+				<DataGridTextColumn Header="Бан" Width="*" Binding="{Binding GetBan}"/>
+
+				<DataGridTemplateColumn>
+					<DataGridTemplateColumn.CellTemplate>
+						<DataTemplate>
+							<Button Name="More" Click="More_Click">
+								Подробнее
+							</Button>
+						</DataTemplate>
+					</DataGridTemplateColumn.CellTemplate>
+				</DataGridTemplateColumn>
+			</DataGrid.Columns>
+		</DataGrid>
+	</Grid>
+</Window>
