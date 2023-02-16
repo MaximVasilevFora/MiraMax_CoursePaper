@@ -1,4 +1,7 @@
 # MiraMax_CoursePaper
+YouTube: https://youtu.be/ieYIAlq_j-U
+
+
 Course work on VPKS on the WPF platform
 1 Task
 ![image](https://user-images.githubusercontent.com/97887129/219421247-3d94a80b-6a8a-453e-96ad-0e90237926ae.png)
