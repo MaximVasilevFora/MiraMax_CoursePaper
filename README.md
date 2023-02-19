@@ -1,6 +1,6 @@
 # MiraMax_CoursePaper
 YouTube: https://youtu.be/ieYIAlq_j-U
-
+User-s guide reference: https://www.notion.so/User-s-guide-for-course-project-c074586e6295480791060d3f86b7502a?pvs=4
 
 Course work on VPKS on the WPF platform
 1 Task
